@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rocco Carik — Private Health Insurance | Lower Costs, Better Benefits</title>
+<meta name="description" content="Rocco Carik helps self-employed professionals and families find private health insurance with lower monthly costs and better benefits. Licensed agent with USHEALTH Advisors, a UnitedHealthcare company. Free 10-minute consultation.">
+<meta property="og:title" content="Rocco Carik — Private Health Insurance">
+<meta property="og:description" content="Health coverage that doesn't punish you for earning more. Free 10-minute consultation with a licensed agent.">
+<meta property="og:image" content="assets/rocco.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0b1f3a;
+  --ink-2:#122b4d;
+  --ink-3:#1a3a66;
+  --paper:#faf7f2;
+  --paper-2:#f3eee6;
+  --white:#ffffff;
+  --blue:#2f6fed;
+  --blue-soft:#e8f0fe;
+  --gold:#c8a24a;
+  --red:#c62828;
+  --text:#22334d;
+  --muted:#5b6b84;
+  --muted-light:#9db0cc;
+  --radius:20px;
+  --shadow:0 20px 60px rgba(11,31,58,.10);
+  --shadow-sm:0 8px 24px rgba(11,31,58,.08);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope',-apple-system,sans-serif;color:var(--text);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,.serif{font-family:'Fraunces',Georgia,serif;font-weight:500;color:var(--ink);line-height:1.12;letter-spacing:-.01em}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+section{padding:104px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:20px}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--blue);border-radius:2px}
+.eyebrow.on-dark{color:#8db3ff}
+.eyebrow.on-dark::before{background:#8db3ff}
+h2{font-size:clamp(32px,4.4vw,50px);margin-bottom:20px}
+.lede{font-size:19px;color:var(--muted);max-width:620px}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+
+/* ---------- NAV ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 0;transition:all .35s}
+nav.scrolled{background:rgba(11,31,58,.86);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);padding:12px 0;box-shadow:0 8px 30px rgba(0,0,0,.18)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;color:#fff}
+.brand-mark{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--blue),#1a4fc0);display:grid;place-items:center;font-family:'Fraunces',serif;font-size:18px;color:#fff;font-weight:600;box-shadow:0 4px 14px rgba(47,111,237,.4)}
+.brand-name{font-weight:800;font-size:15.5px;letter-spacing:.02em}
+.brand-name span{display:block;font-weight:500;font-size:11px;color:var(--muted-light);letter-spacing:.08em;text-transform:uppercase}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{color:rgba(255,255,255,.75);font-size:14.5px;font-weight:600;transition:color .2s}
+.nav-links a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:800;font-size:15.5px;padding:15px 30px;border-radius:100px;transition:all .25s;cursor:pointer;border:none;font-family:'Manrope',sans-serif}
+.btn-primary{background:var(--blue);color:#fff;box-shadow:0 10px 26px rgba(47,111,237,.38)}
+.btn-primary:hover{background:#2159cc;transform:translateY(-2px);box-shadow:0 14px 32px rgba(47,111,237,.46)}
+.btn-ghost{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(8px)}
+.btn-ghost:hover{background:rgba(255,255,255,.15);transform:translateY(-2px)}
+.btn-dark{background:var(--ink);color:#fff;box-shadow:0 10px 26px rgba(11,31,58,.28)}
+.btn-dark:hover{background:var(--ink-3);transform:translateY(-2px)}
+.nav-cta{padding:11px 22px;font-size:14px}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.hamburger span{display:block;width:24px;height:2px;background:#fff;margin:5px 0;border-radius:2px;transition:.3s}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;background:radial-gradient(1200px 700px at 78% -10%,#1e4a8f 0%,transparent 55%),radial-gradient(900px 600px at -10% 110%,#14335e 0%,transparent 50%),var(--ink);color:#fff;padding:180px 0 120px;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.03'%3E%3Cpath d='M0 30h60M30 0v60'/%3E%3C/g%3E%3C/svg%3E");pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center;position:relative;z-index:2}
+.hero h1{font-size:clamp(40px,5.6vw,66px);color:#fff;margin-bottom:26px}
+.hero h1 em{font-style:italic;color:#9cbdff}
+.hero p.sub{font-size:19px;color:rgba(255,255,255,.72);max-width:560px;margin-bottom:38px;line-height:1.65}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:44px}
+.hero-proof{display:flex;gap:28px;flex-wrap:wrap}
+.proof-item{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:rgba(255,255,255,.68)}
+.proof-item svg{flex-shrink:0}
+.hero-visual{position:relative}
+.portrait-card{position:relative;border-radius:28px;overflow:hidden;box-shadow:0 40px 90px rgba(0,0,0,.42);border:1px solid rgba(255,255,255,.14);transform:rotate(1.5deg);transition:transform .5s}
+.portrait-card:hover{transform:rotate(0deg) scale(1.01)}
+.portrait-card img{width:100%;height:auto}
+.portrait-card::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(11,31,58,.35) 0%,transparent 40%)}
+.float-chip{position:absolute;background:rgba(255,255,255,.97);color:var(--ink);border-radius:16px;padding:14px 18px;box-shadow:0 16px 44px rgba(0,0,0,.3);font-size:13px;font-weight:700;line-height:1.35;z-index:3;animation:floaty 5s ease-in-out infinite}
+.float-chip strong{display:block;font-family:'Fraunces',serif;font-size:22px;font-weight:600;color:var(--blue)}
+.chip-1{top:8%;left:-52px;animation-delay:0s}
+.chip-2{bottom:12%;right:-40px;animation-delay:2.5s}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+/* ---------- CRED STRIP ---------- */
+.cred{background:var(--ink-2);color:rgba(255,255,255,.6);padding:22px 0;border-top:1px solid rgba(255,255,255,.06)}
+.cred-inner{display:flex;justify-content:center;align-items:center;gap:18px;flex-wrap:wrap;font-size:13.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.cred-inner .dot{width:4px;height:4px;border-radius:50%;background:var(--gold)}
+.cred-inner .ush{color:#fff}
+
+/* ---------- SCENARIOS ---------- */
+.scenarios{background:var(--paper)}
+.sec-head{max-width:720px;margin-bottom:64px}
+.cards-2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.scenario{background:var(--white);border:1px solid #eae4d9;border-radius:var(--radius);padding:38px 34px;position:relative;transition:transform .3s,box-shadow .3s;overflow:hidden}
+.scenario:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.scenario::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),transparent);opacity:0;transition:opacity .3s}
+.scenario:hover::before{opacity:1}
+.scenario .num{font-family:'Fraunces',serif;font-size:15px;font-weight:600;color:var(--blue);background:var(--blue-soft);width:44px;height:44px;border-radius:12px;display:grid;place-items:center;margin-bottom:22px}
+.scenario h3{font-size:23px;margin-bottom:12px}
+.scenario p{color:var(--muted);font-size:15.5px}
+.scenario .tag{display:inline-block;margin-top:18px;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--red);background:#fdeaea;padding:6px 12px;border-radius:100px}
+
+/* ---------- COMPARE ---------- */
+.compare{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.compare::before{content:"";position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(47,111,237,.16),transparent 70%);top:-200px;right:-150px}
+.compare h2{color:#fff}
+.compare .lede{color:rgba(255,255,255,.65)}
+.table-wrap{margin-top:56px;border-radius:24px;overflow:hidden;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03);backdrop-filter:blur(8px);position:relative;z-index:2}
+.ctable{width:100%;border-collapse:collapse}
+.ctable th,.ctable td{padding:20px 26px;text-align:left;font-size:15px;border-bottom:1px solid rgba(255,255,255,.08)}
+.ctable tr:last-child td{border-bottom:none}
+.ctable th{font-family:'Manrope',sans-serif;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);font-weight:800;background:rgba(255,255,255,.04)}
+.ctable th.hl,.ctable td.hl{background:rgba(47,111,237,.14);border-left:1px solid rgba(47,111,237,.3);border-right:1px solid rgba(47,111,237,.3)}
+.ctable th.hl{color:#9cbdff}
+.ctable td{color:rgba(255,255,255,.78)}
+.ctable td:first-child{color:rgba(255,255,255,.55);font-weight:600;font-size:14px}
+.yes{color:#6ee7a0!important;font-weight:700}
+.no{color:#ff9a9a!important}
+.meh{color:#ffd98a!important}
+
+/* ---------- WHO ---------- */
+.who{background:var(--paper-2)}
+.who-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+.check-list{display:flex;flex-direction:column;gap:16px;margin-top:8px}
+.check{display:flex;gap:16px;align-items:flex-start;background:var(--white);border:1px solid #e7e0d4;border-radius:16px;padding:20px 22px;transition:transform .25s,box-shadow .25s}
+.check:hover{transform:translateX(6px);box-shadow:var(--shadow-sm)}
+.check .ic{flex-shrink:0;width:26px;height:26px;border-radius:50%;background:var(--blue);display:grid;place-items:center;margin-top:2px}
+.check strong{display:block;font-size:15.5px;color:var(--ink);margin-bottom:2px}
+.check span{font-size:14px;color:var(--muted)}
+.who-note{background:var(--ink);color:#fff;border-radius:var(--radius);padding:36px;margin-top:28px;position:relative}
+.who-note p{font-family:'Fraunces',serif;font-size:20px;line-height:1.5;font-style:italic;color:rgba(255,255,255,.9)}
+.who-note .sig{margin-top:16px;font-family:'Manrope',sans-serif;font-style:normal;font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#8db3ff}
+
+/* ---------- STEPS ---------- */
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:60px}
+.step{background:var(--white);border:1px solid #eae4d9;border-radius:var(--radius);padding:40px 32px;position:relative;transition:transform .3s,box-shadow .3s}
+.step:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.step .big{font-family:'Fraunces',serif;font-size:64px;font-weight:400;color:#e5ddce;line-height:1;margin-bottom:18px}
+.step h3{font-size:21px;margin-bottom:10px}
+.step p{font-size:15px;color:var(--muted)}
+.step .time{display:inline-block;margin-top:16px;font-size:12.5px;font-weight:800;color:var(--blue);background:var(--blue-soft);padding:6px 14px;border-radius:100px}
+
+/* ---------- ABOUT ---------- */
+.about{background:var(--white)}
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:center}
+.about-photo{position:relative}
+.about-photo img{border-radius:24px;box-shadow:var(--shadow)}
+.about-photo::before{content:"";position:absolute;inset:-18px 18px 18px -18px;border:2px solid var(--gold);border-radius:28px;z-index:-1;opacity:.5}
+.about-badge{position:absolute;bottom:-20px;right:-16px;background:var(--ink);color:#fff;border-radius:16px;padding:16px 22px;box-shadow:0 16px 40px rgba(11,31,58,.3)}
+.about-badge strong{display:block;font-size:14.5px}
+.about-badge span{font-size:12px;color:var(--muted-light)}
+.about p{color:var(--muted);font-size:16.5px;margin-bottom:18px}
+.about p strong{color:var(--ink)}
+.promises{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:30px}
+.promise{display:flex;gap:12px;align-items:center;font-size:14.5px;font-weight:700;color:var(--ink)}
+.promise .ic{width:22px;height:22px;border-radius:50%;background:var(--blue-soft);display:grid;place-items:center;flex-shrink:0}
+
+/* ---------- FAQ ---------- */
+.faq{background:var(--paper)}
+.faq-list{max-width:780px;margin:56px auto 0}
+.faq-item{background:var(--white);border:1px solid #eae4d9;border-radius:16px;margin-bottom:14px;overflow:hidden;transition:box-shadow .3s}
+.faq-item.open{box-shadow:var(--shadow-sm)}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 28px;background:none;border:none;cursor:pointer;text-align:left;font-family:'Manrope',sans-serif;font-size:16.5px;font-weight:800;color:var(--ink)}
+.faq-q .plus{flex-shrink:0;width:30px;height:30px;border-radius:50%;background:var(--blue-soft);display:grid;place-items:center;transition:transform .3s;color:var(--blue);font-size:18px;font-weight:600}
+.faq-item.open .plus{transform:rotate(45deg);background:var(--blue);color:#fff}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.22,1,.36,1)}
+.faq-a p{padding:0 28px 26px;color:var(--muted);font-size:15.5px}
+
+/* ---------- FINAL CTA ---------- */
+.final{background:radial-gradient(900px 500px at 50% -20%,#1e4a8f 0%,transparent 60%),var(--ink);color:#fff;text-align:center;position:relative;overflow:hidden}
+.final h2{color:#fff;font-size:clamp(36px,5vw,58px);max-width:800px;margin:0 auto 22px}
+.final h2 em{font-style:italic;color:#9cbdff}
+.final .lede{margin:0 auto 42px;color:rgba(255,255,255,.68)}
+.final-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
+.final-pills{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.pill{font-size:13.5px;font-weight:700;color:rgba(255,255,255,.75);border:1px solid rgba(255,255,255,.18);padding:9px 20px;border-radius:100px;display:flex;align-items:center;gap:8px}
+.pill svg{flex-shrink:0}
+
+/* ---------- FOOTER ---------- */
+footer{background:#081527;color:rgba(255,255,255,.55);padding:64px 0 40px;font-size:14px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:60px;margin-bottom:48px}
+.foot-grid h4{color:#fff;font-family:'Manrope',sans-serif;font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:18px;font-weight:800}
+.foot-grid a{display:block;margin-bottom:10px;transition:color .2s}
+.foot-grid a:hover{color:#fff}
+.foot-brand p{max-width:320px;margin-top:14px;line-height:1.7}
+.disclaimer{border-top:1px solid rgba(255,255,255,.08);padding-top:28px;font-size:12px;line-height:1.7;color:rgba(255,255,255,.35)}
+
+/* ---------- MOBILE ---------- */
+@media(max-width:960px){
+  section{padding:72px 0}
+  .hero{padding:140px 0 80px}
+  .hero-grid,.who-grid,.about-grid{grid-template-columns:1fr;gap:48px}
+  .hero-visual{max-width:420px;margin:0 auto}
+  .cards-2{grid-template-columns:1fr}
+  .steps-grid{grid-template-columns:1fr}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(11,31,58,.98);flex-direction:column;padding:28px 24px;gap:20px;align-items:flex-start}
+  .nav-links.open{display:flex}
+  .hamburger{display:block}
+  .chip-1{left:-8px}
+  .chip-2{right:-8px}
+  .foot-grid{grid-template-columns:1fr;gap:36px}
+  .table-wrap{overflow-x:auto}
+  .ctable{min-width:640px}
+  .about-photo{max-width:380px;margin:0 auto}
+  .promises{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand">
+      <div class="brand-mark">RC</div>
+      <div class="brand-name">Rocco Carik<span>Licensed Health Insurance Agent</span></div>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="#scenarios">Sound Familiar?</a>
+      <a href="#compare">Why Private</a>
+      <a href="#who">Who It's For</a>
+      <a href="#about">About Rocco</a>
+      <a href="#faq">FAQ</a>
+      <a href="tel:+15617027836" class="btn btn-primary nav-cta">Free Consultation</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow on-dark reveal">Private Health Insurance · South Florida &amp; Beyond</div>
+      <h1 class="reveal d1">Health coverage that doesn't punish you <em>for earning more.</em></h1>
+      <p class="sub reveal d2">If you make "too much" for a subsidy, the system hands you the expensive option and calls it your only one. It isn't. I help self-employed professionals and families access private plans with lower monthly costs and better benefits — and it starts with one 10-minute call.</p>
+      <div class="hero-ctas reveal d3">
+        <a href="tel:+15617027836" class="btn btn-primary">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" fill="currentColor"/></svg>
+          Call (561) 702-7836
+        </a>
+        <a href="sms:+15617027836?&body=Hey%20Rocco%2C%20I%27d%20like%20a%20free%20quote%20comparison." class="btn btn-ghost">Text Me Instead</a>
+      </div>
+      <div class="hero-proof reveal d4">
+        <div class="proof-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#6ee7a0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>$0 to work with me</div>
+        <div class="proof-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#6ee7a0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Zero obligation, zero pressure</div>
+        <div class="proof-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#6ee7a0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>One agent. Not a call center.</div>
+      </div>
+    </div>
+    <div class="hero-visual reveal d2">
+      <div class="portrait-card"><img src="assets/rocco.webp" alt="Rocco Carik, licensed health insurance agent" width="952" height="1274"></div>
+      <div class="float-chip chip-1"><strong>2–3×</strong>what COBRA often costs vs. a comparable private plan</div>
+      <div class="float-chip chip-2"><strong>10 min</strong>is all the first call takes</div>
+    </div>
+  </div>
+</header>
+
+<!-- CRED STRIP -->
+<div class="cred">
+  <div class="wrap cred-inner">
+    <span>Licensed Agent</span><span class="dot"></span>
+    <span class="ush">USHEALTH Advisors</span><span class="dot"></span>
+    <span>A UnitedHealthcare Company</span><span class="dot"></span>
+    <span>Nationwide PPO Networks</span>
+  </div>
+</div>
+
+<!-- SCENARIOS -->
+<section class="scenarios" id="scenarios">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow reveal">Sound Familiar?</div>
+      <h2 class="reveal d1">The system has a blind spot. You're standing in it.</h2>
+      <p class="lede reveal d2">There's a whole group of people who earn too much for government help — and get quoted the worst prices because of it. If any of these four sound like you, you're exactly who I help.</p>
+    </div>
+    <div class="cards-2">
+      <div class="scenario reveal">
+        <div class="num">01</div>
+        <h3>You're self-employed and over the subsidy cliff</h3>
+        <p>Consultants, business owners, freelancers, 1099s — your income disqualifies you from ACA tax credits, so you're paying full sticker price for a marketplace plan built for someone else. If you're paying full price anyway, why not shop the entire market?</p>
+        <span class="tag">Paying full price for less</span>
+      </div>
+      <div class="scenario reveal d1">
+        <div class="num">02</div>
+        <h3>Your employer plan costs too much for what it is</h3>
+        <p>High premiums, a deductible you'll never hit before the year resets, and networks that keep shrinking. Here's what HR never mentions: you're allowed to shop privately instead of accepting whatever landed in your enrollment packet.</p>
+        <span class="tag">HR's best isn't the best</span>
+      </div>
+      <div class="scenario reveal d2">
+        <div class="num">03</div>
+        <h3>Adding your family feels like a second mortgage</h3>
+        <p>Your own coverage through work might be fine — until you add a spouse and kids and the price triples. Often the smartest move is keeping yourself on the work plan and insuring your family privately for a fraction of the cost.</p>
+        <span class="tag">Dependents priced like luxuries</span>
+      </div>
+      <div class="scenario reveal d3">
+        <div class="num">04</div>
+        <h3>You just opened your COBRA letter</h3>
+        <p>Laid off, changed jobs, retired early, or aged off a parent's plan — and now COBRA wants 2–3× what a private plan often costs for similar or better coverage. You have a 60-day election window. Use it to compare before you commit.</p>
+        <span class="tag">The 60-day window is ticking</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARE -->
+<section class="compare" id="compare">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow on-dark reveal">The Third Option</div>
+      <h2 class="reveal d1">You were told there were two options. There are three.</h2>
+      <p class="lede reveal d2">Some of the strongest health plans in the country aren't listed on the Marketplace — they're private plans you can only access through a licensed agent. That's not a loophole. That's just how the market actually works.</p>
+    </div>
+    <div class="table-wrap reveal d2">
+      <table class="ctable">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Marketplace (Unsubsidized)</th>
+            <th>COBRA</th>
+            <th class="hl">Private Plan w/ Rocco</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Monthly cost at your income</td><td class="no">Full sticker price</td><td class="no">Often 2–3× market rate</td><td class="hl yes">Priced for you, not your subsidy</td></tr>
+          <tr><td>Plan options you'll see</td><td class="meh">Only what's listed publicly</td><td class="meh">One plan — your old one</td><td class="hl yes">The whole market, compared side-by-side</td></tr>
+          <tr><td>Who's helping you choose</td><td class="no">A website + spam calls</td><td class="no">A packet in the mail</td><td class="hl yes">One licensed agent, direct line</td></tr>
+          <tr><td>Built around your doctors &amp; life</td><td class="meh">You do the guesswork</td><td class="meh">Whatever it was before</td><td class="hl yes">Matched to your doctors, meds &amp; budget</td></tr>
+          <tr><td>Cost to get advice</td><td class="meh">—</td><td class="meh">—</td><td class="hl yes">$0. Always.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- WHO -->
+<section class="who" id="who">
+  <div class="wrap who-grid">
+    <div>
+      <div class="eyebrow reveal">Who It's For</div>
+      <h2 class="reveal d1">I do my best work for people like this.</h2>
+      <p class="lede reveal d2" style="margin-bottom:28px">Not everyone needs a private plan — and I'll tell you if you don't. But if most of this list sounds like you, there's a very good chance you're overpaying right now.</p>
+      <div class="who-note reveal d3">
+        <p>"My job isn't to sell you a plan. It's to show you what the market actually offers at your income level — and let the numbers do the talking."</p>
+        <div class="sig">— Rocco Carik</div>
+      </div>
+    </div>
+    <div class="check-list">
+      <div class="check reveal"><div class="ic"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><strong>Self-employed, business owner, or 1099</strong><span>Or W-2 at a company with thin benefits</span></div></div>
+      <div class="check reveal d1"><div class="ic"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><strong>Household income roughly $75K–$300K+</strong><span>Too "successful" for subsidies — the exact zone the system overcharges</span></div></div>
+      <div class="check reveal d2"><div class="ic"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><strong>Family-focused</strong><span>Covering a spouse or kids is where the savings get serious</span></div></div>
+      <div class="check reveal d3"><div class="ic"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><strong>You want value, not junk</strong><span>The cheapest plan isn't the goal — the smartest one is</span></div></div>
+      <div class="check reveal d4"><div class="ic"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><strong>Tired of doing this alone</strong><span>You'd rather have one expert's direct number than another 1-800 menu</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section id="how">
+  <div class="wrap">
+    <div class="sec-head" style="text-align:center;margin-left:auto;margin-right:auto">
+      <div class="eyebrow reveal" style="justify-content:center">How It Works</div>
+      <h2 class="reveal d1">Ten minutes now. Clarity for years.</h2>
+      <p class="lede reveal d2" style="margin:0 auto">No paperwork to start. No commitment to finish. Just a straight answer to one question: is there a better deal out there for you?</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step reveal">
+        <div class="big">1</div>
+        <h3>We talk. Briefly.</h3>
+        <p>A quick call about your situation — who needs coverage, which doctors matter to you, what you're paying now. That's it. No medical exams, no interrogation.</p>
+        <span class="time">~10 minutes</span>
+      </div>
+      <div class="step reveal d1">
+        <div class="big">2</div>
+        <h3>I shop the market for you.</h3>
+        <p>I compare private plans against your current option — Marketplace, employer plan, or COBRA — and bring back a side-by-side you can actually read. Real numbers, plain English.</p>
+        <span class="time">Within 24–48 hours</span>
+      </div>
+      <div class="step reveal d2">
+        <div class="big">3</div>
+        <h3>You decide. I stay.</h3>
+        <p>If the numbers win, I handle the enrollment end-to-end. If they don't, I'll tell you to stay put — and you've lost nothing. Either way, you keep my cell number for whenever life changes.</p>
+        <span class="time">Year-round support</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-photo reveal">
+      <img src="assets/rocco.webp" alt="Rocco Carik" width="952" height="1274">
+      <div class="about-badge"><strong>Rocco Carik</strong><span>USHEALTH Advisors · A UnitedHealthcare Company</span></div>
+    </div>
+    <div>
+      <div class="eyebrow reveal">About Rocco</div>
+      <h2 class="reveal d1">Big-carrier backing. One-agent accountability.</h2>
+      <p class="reveal d2">Here's the honest truth about health insurance: the product matters, but <strong>who walks you through it matters more.</strong> Most people never get a real comparison — they get a website, a hold queue, and a renewal letter that goes up every year.</p>
+      <p class="reveal d2">I work with <strong>USHEALTH Advisors, a UnitedHealthcare company</strong> — which means the plans I offer are backed by one of the largest names in American healthcare. But you're not calling a company. You're calling me. I pick up, I know your file, and I'm the same person at enrollment as I am a year later when you have a question about a bill.</p>
+      <p class="reveal d3">My clients are mostly self-employed pros and families who were told expensive was their only option. My favorite part of this job is the moment they see the side-by-side and say, <strong>"Wait — why didn't anyone show me this before?"</strong></p>
+      <div class="promises">
+        <div class="promise reveal d3"><div class="ic"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#2f6fed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>You get my cell, not a call center</div>
+        <div class="promise reveal d3"><div class="ic"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#2f6fed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Plain English, never jargon</div>
+        <div class="promise reveal d4"><div class="ic"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#2f6fed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>If staying put is smarter, I'll say so</div>
+        <div class="promise reveal d4"><div class="ic"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#2f6fed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Zero spam — one conversation at a time</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="sec-head" style="text-align:center;margin-left:auto;margin-right:auto">
+      <div class="eyebrow reveal" style="justify-content:center">Questions, Answered Straight</div>
+      <h2 class="reveal d1">Everything people ask me before the first call.</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q">Does it really cost nothing to work with you?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Really. Licensed agents are compensated by the insurance carriers, not by you. You pay the same premium whether you enroll through me or on your own — the difference is that with me, someone actually shopped the market for you first and stays on your side afterward.</p></div>
+      </div>
+      <div class="faq-item reveal d1">
+        <button class="faq-q">Is private health insurance actually legitimate?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Completely. Private plans are fully regulated insurance products — the ones I offer come through USHEALTH Advisors, a UnitedHealthcare company. They simply aren't sold on the government Marketplace, which is why most people have never had them presented side-by-side with what they're paying now.</p></div>
+      </div>
+      <div class="faq-item reveal d2">
+        <button class="faq-q">Can I keep my doctors?<span class="plus">+</span></button>
+        <div class="faq-a"><p>That's one of the first things we check — before we talk about any plan. The plans I work with use large nationwide PPO networks, and on our first call I'll look up your specific doctors and facilities so you know exactly where you stand before you decide anything.</p></div>
+      </div>
+      <div class="faq-item reveal d3">
+        <button class="faq-q">I just got my COBRA paperwork. How fast do I need to move?<span class="plus">+</span></button>
+        <div class="faq-a"><p>You typically have a 60-day window to elect COBRA — which is actually good news, because it gives you time to compare before committing to a premium that's often 2–3× market rate. Call me before you sign anything. Ten minutes now can save you thousands over the year.</p></div>
+      </div>
+      <div class="faq-item reveal d4">
+        <button class="faq-q">What about pre-existing conditions?<span class="plus">+</span></button>
+        <div class="faq-a"><p>It depends on your health history, and I'll be straight with you about it — private plans aren't the right fit for every situation. That's exactly why the first call matters: I'll tell you honestly whether a private plan, a Marketplace plan, or staying where you are is your best move. My advice is free either way.</p></div>
+      </div>
+      <div class="faq-item reveal d4">
+        <button class="faq-q">What happens after I enroll? Do you disappear?<span class="plus">+</span></button>
+        <div class="faq-a"><p>The opposite — that's when most agents disappear, and it's exactly where I try to be different. Billing question, new baby, income change, moving states: you text or call the same number you called the first day. I'm your agent for the life of the plan, not the length of the sale.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="wrap">
+    <div class="eyebrow on-dark reveal" style="justify-content:center">One Call. Real Numbers.</div>
+    <h2 class="reveal d1">Ready to see what you've <em>been overpaying?</em></h2>
+    <p class="lede reveal d2">Worst case, you find out your current plan is a good deal — and you get peace of mind for free. Best case, you keep more of your money every single month. There's no version of this where the call wasn't worth it.</p>
+    <div class="final-ctas reveal d3">
+      <a href="tel:+15617027836" class="btn btn-primary" style="font-size:17px;padding:18px 38px">Call (561) 702-7836</a>
+      <a href="mailto:Rocco.Carik@ushadvisors.com?subject=Free%20Quote%20Comparison" class="btn btn-ghost" style="font-size:17px;padding:18px 38px">Email Rocco</a>
+    </div>
+    <div class="final-pills reveal d4">
+      <span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#8db3ff" stroke-width="2"/></svg>100% Confidential</span>
+      <span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#8db3ff" stroke-width="2"/><path d="M12 6v6l4 2" stroke="#8db3ff" stroke-width="2" stroke-linecap="round"/></svg>Under 10 Minutes</span>
+      <span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#8db3ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Zero Obligation</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="brand"><div class="brand-mark">RC</div><div class="brand-name" style="color:#fff">Rocco Carik<span>Licensed Health Insurance Agent</span></div></div>
+        <p>Helping self-employed professionals and families find private health coverage with lower monthly costs and better benefits — one honest conversation at a time.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:+15617027836">(561) 702-7836</a>
+        <a href="mailto:Rocco.Carik@ushadvisors.com">Rocco.Carik@ushadvisors.com</a>
+        <a href="https://www.ushagent.com/RoccoCarik" target="_blank" rel="noopener">ushagent.com/RoccoCarik</a>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="#scenarios">Sound Familiar?</a>
+        <a href="#compare">Why Private</a>
+        <a href="#how">How It Works</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </div>
+    <div class="disclaimer">
+      Rocco Carik is a licensed insurance agent with USHEALTH Advisors, a UnitedHealthcare company. This website is for informational purposes only and does not constitute an offer of coverage. Plans, benefits, rates, exclusions, and limitations vary by state and individual circumstances, and product availability differs by state. Savings examples are illustrative and not guaranteed; your results will depend on your situation. Please consult plan documents for complete terms.
+      <br><br>© 2026 Rocco Carik. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+// Nav scroll state
+const nav = document.getElementById('nav');
+addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 40), {passive:true});
+// Mobile menu
+const burger = document.getElementById('hamburger'), links = document.getElementById('navLinks');
+burger.addEventListener('click', () => links.classList.toggle('open'));
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+// Reveal on scroll
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.12});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(q => q.addEventListener('click', () => {
+  const item = q.parentElement, a = item.querySelector('.faq-a'), open = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(o => { o.classList.remove('open'); o.querySelector('.faq-a').style.maxHeight = 0; });
+  if (!open) { item.classList.add('open'); a.style.maxHeight = a.scrollHeight + 'px'; }
+}));
+</script>
+</body>
+</html>
