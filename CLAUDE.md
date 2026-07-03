@@ -1,19 +1,26 @@
 # Rocco Carik — Private Health Insurance Website
 
 ## What this is
-A premium single-page marketing site for **Rocco Carik**, a licensed health insurance
-agent with **USHEALTH Advisors (a UnitedHealthcare company)** based in South Florida.
+A premium single-page marketing site for **Rocco Carik**, an independent licensed
+health insurance agent based in South Florida.
 Built as a 1-to-1-but-better remake of his competitor's site: https://oxana.care/
+
+**Branding rule (2026-07-03, per Isaac):** the site must NOT mention USHEALTH
+Advisors or UnitedHealthcare anywhere. Positioning is "Independent Licensed Agent."
+Do not reintroduce carrier names.
 
 - **Live URL (send this to people):** https://infamous-collab.github.io/rocco-carik/
 - **Repo:** github.com/Infamous-collab/rocco-carik
 - **Owner of project:** Isaac (does marketing for Rocco). Rocco is the client/friend.
 
 ## Rocco's real info (do not change without checking)
-- Name: Rocco Carik — Licensed Agent
-- Phone: (561) 702-7836 → used as `tel:+15617027836` and `sms:+15617027836`
-- Email: Rocco.Carik@ushadvisors.com
-- USHA agent page: https://www.ushagent.com/RoccoCarik
+- Name: Rocco Carik — Independent Licensed Agent
+- Email: carikhealths@gmail.com (replaced Rocco.Carik@ushadvisors.com on 2026-07-03)
+- Phone (561) 702-7836 is NOT shown on the site anymore — Rocco calls leads himself
+  after they book. No `tel:`/`sms:` links; all CTAs go to Calendly.
+- Calendly: **PLACEHOLDER** — every CTA points to `https://calendly.com/ROCCO-CALENDLY-LINK`.
+  Find/replace that string with the real link when Rocco provides it. Do not push to
+  `main` (auto-deploys) while the placeholder is in place.
 - Photo: `assets/rocco.webp` (portrait in navy quarter-zip in front of silver phoenix wall)
 
 ## Stack & structure
@@ -42,8 +49,8 @@ with expensive options. Sections map to the brief's four core scenarios:
 4. Lost coverage, COBRA is 2–3× market (60-day election window = urgency angle)
 
 Positioning: "the third option" — private plans not listed on the Marketplace;
-one agent with a direct line vs. call centers; $0 to work with him; big-carrier
-(UnitedHealthcare) credibility with personal accountability.
+one agent with a direct line vs. call centers; $0 to work with him; independent
+agent shopping major nationally recognized carriers, with personal accountability.
 
 ## Compliance guardrails — IMPORTANT
 Health insurance marketing has state/platform rules. Keep these intact:
@@ -55,8 +62,8 @@ Health insurance marketing has state/platform rules. Keep these intact:
 - Footer disclaimer must stay.
 
 ## Known TODOs / likely next requests
-- Swap tel/sms CTAs to a **Calendly link** when Rocco provides one (competitor uses
-  Calendly; all `btn-primary` CTAs should point there).
+- **Replace the Calendly placeholder** `https://calendly.com/ROCCO-CALENDLY-LINK`
+  with Rocco's real Calendly URL (4 occurrences in index.html), then push to deploy.
 - Add real **Google reviews/testimonials** section when available.
 - Possible custom domain (e.g. roccocarik.com) → CNAME + Pages settings.
 - Possible lead-capture form (needs a backend/formspree-style service — currently
