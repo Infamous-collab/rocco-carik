@@ -18,9 +18,7 @@ Do not reintroduce carrier names.
 - Email: carikhealths@gmail.com (replaced Rocco.Carik@ushadvisors.com on 2026-07-03)
 - Phone (561) 702-7836 is NOT shown on the site anymore — Rocco calls leads himself
   after they book. No `tel:`/`sms:` links; all CTAs go to Calendly.
-- Calendly: **PLACEHOLDER** — every CTA points to `https://calendly.com/ROCCO-CALENDLY-LINK`.
-  Find/replace that string with the real link when Rocco provides it. Do not push to
-  `main` (auto-deploys) while the placeholder is in place.
+- Calendly (real, live): https://calendly.com/carikhealths/30min — all 4 CTAs point here.
 - Photo: `assets/rocco.webp` (portrait in navy quarter-zip in front of silver phoenix wall)
 
 ## Stack & structure
@@ -62,8 +60,11 @@ Health insurance marketing has state/platform rules. Keep these intact:
 - Footer disclaimer must stay.
 
 ## Known TODOs / likely next requests
-- **Replace the Calendly placeholder** `https://calendly.com/ROCCO-CALENDLY-LINK`
-  with Rocco's real Calendly URL (4 occurrences in index.html), then push to deploy.
+- Custom domain coming: Isaac is deciding between roccocarik.com / carikhealth.com
+  (GoDaddy). When bought: add CNAME file, 4 A-records + www CNAME at registrar,
+  set Pages custom domain + HTTPS.
+- Site copy promises a 10-minute call but the Calendly event is named "30min" —
+  consider having Rocco rename the event or align the copy.
 - Add real **Google reviews/testimonials** section when available.
 - Possible custom domain (e.g. roccocarik.com) → CNAME + Pages settings.
 - Possible lead-capture form (needs a backend/formspree-style service — currently
