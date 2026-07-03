@@ -77,7 +77,8 @@ nav.scrolled{background:rgba(11,31,58,.86);backdrop-filter:blur(16px);-webkit-ba
 .hero h1{font-size:clamp(40px,5.6vw,66px);color:#fff;margin-bottom:26px}
 .hero h1 em{font-style:italic;color:#9cbdff}
 .hero p.sub{font-size:19px;color:rgba(255,255,255,.72);max-width:560px;margin-bottom:38px;line-height:1.65}
-.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:44px}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:16px}
+.cta-note{font-size:13.5px;font-weight:600;color:rgba(255,255,255,.5);margin-bottom:40px}
 .hero-proof{display:flex;gap:28px;flex-wrap:wrap}
 .proof-item{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:rgba(255,255,255,.68)}
 .proof-item svg{flex-shrink:0}
@@ -150,6 +151,8 @@ nav.scrolled{background:rgba(11,31,58,.86);backdrop-filter:blur(16px);-webkit-ba
 .step h3{font-size:21px;margin-bottom:10px}
 .step p{font-size:15px;color:var(--muted)}
 .step .time{display:inline-block;margin-top:16px;font-size:12.5px;font-weight:800;color:var(--blue);background:var(--blue-soft);padding:6px 14px;border-radius:100px}
+.steps-note{max-width:680px;margin:44px auto 0;text-align:center;font-size:15.5px;color:var(--muted);line-height:1.7}
+.steps-note strong{color:var(--ink)}
 
 /* ---------- ABOUT ---------- */
 .about{background:var(--white)}
@@ -182,7 +185,8 @@ nav.scrolled{background:rgba(11,31,58,.86);backdrop-filter:blur(16px);-webkit-ba
 .final h2{color:#fff;font-size:clamp(36px,5vw,58px);max-width:800px;margin:0 auto 22px}
 .final h2 em{font-style:italic;color:#9cbdff}
 .final .lede{margin:0 auto 42px;color:rgba(255,255,255,.68)}
-.final-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
+.final-ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:18px}
+.final .cta-note{max-width:600px;margin:0 auto 36px}
 .final-pills{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 .pill{font-size:13.5px;font-weight:700;color:rgba(255,255,255,.75);border:1px solid rgba(255,255,255,.18);padding:9px 20px;border-radius:100px;display:flex;align-items:center;gap:8px}
 .pill svg{flex-shrink:0}
@@ -244,13 +248,14 @@ footer{background:#081527;color:rgba(255,255,255,.55);padding:64px 0 40px;font-s
     <div>
       <div class="eyebrow on-dark reveal">Private Health Insurance · South Florida &amp; Beyond</div>
       <h1 class="reveal d1">Health coverage that doesn't punish you <em>for earning more.</em></h1>
-      <p class="sub reveal d2">If you make "too much" for a subsidy, the system hands you the expensive option and calls it your only one. It isn't. I help self-employed professionals and families access private plans with lower monthly costs and better benefits — and it starts with one 10-minute call.</p>
+      <p class="sub reveal d2">If you make "too much" for a subsidy, the system hands you the expensive option and calls it your only one. It isn't. I help self-employed professionals and families access private plans with lower monthly costs and better benefits. One 10-minute call gets you a real side-by-side — and if your current plan wins, I'll be the first to tell you to keep it.</p>
       <div class="hero-ctas reveal d3">
         <a href="https://calendly.com/ROCCO-CALENDLY-LINK" target="_blank" rel="noopener" class="btn btn-primary">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="3" stroke="currentColor" stroke-width="2"/><path d="M8 2v4M16 2v4M3 10h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
           Book Free Consultation
         </a>
       </div>
+      <div class="cta-note reveal d3">Booking takes 30 seconds · I call you at the time you pick · No spam, no pressure, ever</div>
       <div class="hero-proof reveal d4">
         <div class="proof-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#6ee7a0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>$0 to work with me</div>
         <div class="proof-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#6ee7a0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Zero obligation, zero pressure</div>
@@ -334,6 +339,7 @@ footer{background:#081527;color:rgba(255,255,255,.55);padding:64px 0 40px;font-s
           <tr><td>Plan options you'll see</td><td class="meh">Only what's listed publicly</td><td class="meh">One plan — your old one</td><td class="hl yes">The whole market, compared side-by-side</td></tr>
           <tr><td>Who's helping you choose</td><td class="no">A website + spam calls</td><td class="no">A packet in the mail</td><td class="hl yes">One licensed agent, direct line</td></tr>
           <tr><td>Built around your doctors &amp; life</td><td class="meh">You do the guesswork</td><td class="meh">Whatever it was before</td><td class="hl yes">Matched to your doctors, meds &amp; budget</td></tr>
+          <tr><td>When you can enroll</td><td class="meh">Open enrollment, with few exceptions</td><td class="no">60-day deadline, then it's gone</td><td class="hl yes">Typically year-round — start when ready</td></tr>
           <tr><td>Cost to get advice</td><td class="meh">—</td><td class="meh">—</td><td class="hl yes">$0. Always.</td></tr>
         </tbody>
       </table>
@@ -391,6 +397,7 @@ footer{background:#081527;color:rgba(255,255,255,.55);padding:64px 0 40px;font-s
         <span class="time">Year-round support</span>
       </div>
     </div>
+    <p class="steps-note reveal d3">Still waiting for the catch? There isn't one. <strong>Insurance carriers pay licensed agents directly</strong> — your premium is identical whether you enroll through me or on your own. The only thing that changes is whether anyone actually shopped the market for you first.</p>
   </div>
 </section>
 
@@ -426,12 +433,24 @@ footer{background:#081527;color:rgba(255,255,255,.55);padding:64px 0 40px;font-s
     </div>
     <div class="faq-list">
       <div class="faq-item reveal">
-        <button class="faq-q">Does it really cost nothing to work with you?<span class="plus">+</span></button>
-        <div class="faq-a"><p>Really. Licensed agents are compensated by the insurance carriers, not by you. You pay the same premium whether you enroll through me or on your own — the difference is that with me, someone actually shopped the market for you first and stays on your side afterward.</p></div>
+        <button class="faq-q">Free? Okay — what's the catch?<span class="plus">+</span></button>
+        <div class="faq-a"><p>There isn't one, and here's the math that proves it: licensed agents are paid by the insurance carriers, not by you. Your premium is identical whether you enroll through me or on your own. So the real question isn't "what does Rocco cost" — it's "why would I pay the same price and <em>not</em> have someone shop the market for me and stay on my side afterward?"</p></div>
       </div>
       <div class="faq-item reveal d1">
         <button class="faq-q">Is private health insurance actually legitimate?<span class="plus">+</span></button>
-        <div class="faq-a"><p>Completely. Private plans are fully regulated insurance products from established, nationally recognized carriers. They simply aren't sold on the government Marketplace, which is why most people have never had them presented side-by-side with what they're paying now.</p></div>
+        <div class="faq-a"><p>Completely. Private plans are fully regulated insurance products from established, nationally recognized carriers. They simply aren't sold on the government Marketplace, which is why most people have never had them presented side-by-side with what they're paying now. Regulated product, licensed agent, real carrier — the only unusual part is that nobody showed you this option before.</p></div>
+      </div>
+      <div class="faq-item reveal d1">
+        <button class="faq-q">Is this call going to be a sales pitch?<span class="plus">+</span></button>
+        <div class="faq-a"><p>No — and honestly, pressure would be terrible business for me. My entire model depends on you looking at a side-by-side and deciding for yourself. On the call I ask about your situation; afterward I bring back real numbers. If your current plan is the better deal, I'll tell you to keep it — because people remember honesty and send their friends. No contract, no fee, and if it's not a fit, you never hear from me again.</p></div>
+      </div>
+      <div class="faq-item reveal d2">
+        <button class="faq-q">Can't I just compare plans online myself?<span class="plus">+</span></button>
+        <div class="faq-a"><p>You can — but there are two problems. First, the sites you'd use only show what's listed on the public Marketplace; the private plans I quote aren't on them. Second, many "compare quotes" sites are lead machines that share your number with a dozen call centers — that's where the spam calls come from. With me, the price is the same, you see more of the market, and your information stays with exactly one person.</p></div>
+      </div>
+      <div class="faq-item reveal d2">
+        <button class="faq-q">Do I have to wait for open enrollment?<span class="plus">+</span></button>
+        <div class="faq-a"><p>No — that's a Marketplace rule, not a private-plan rule. The plans I work with can typically be quoted and started year-round. So if you're overpaying in July, you don't have to keep overpaying until January just because a website says the window is closed.</p></div>
       </div>
       <div class="faq-item reveal d2">
         <button class="faq-q">Can I keep my doctors?<span class="plus">+</span></button>
@@ -463,6 +482,7 @@ footer{background:#081527;color:rgba(255,255,255,.55);padding:64px 0 40px;font-s
       <a href="https://calendly.com/ROCCO-CALENDLY-LINK" target="_blank" rel="noopener" class="btn btn-primary" style="font-size:17px;padding:18px 38px">Book Free Consultation</a>
       <a href="mailto:carikhealths@gmail.com?subject=Free%20Quote%20Comparison" class="btn btn-ghost" style="font-size:17px;padding:18px 38px">Email Rocco</a>
     </div>
+    <div class="cta-note reveal d3">Here's exactly what happens: you pick a time, I call you, and ten minutes later you know your real number. No Zoom link, no paperwork, nothing to prepare — just know roughly what you pay now.</div>
     <div class="final-pills reveal d4">
       <span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#8db3ff" stroke-width="2"/></svg>100% Confidential</span>
       <span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#8db3ff" stroke-width="2"/><path d="M12 6v6l4 2" stroke="#8db3ff" stroke-width="2" stroke-linecap="round"/></svg>Under 10 Minutes</span>
