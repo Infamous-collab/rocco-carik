@@ -60,9 +60,15 @@ Health insurance marketing has state/platform rules. Keep these intact:
 - Footer disclaimer must stay.
 
 ## Known TODOs / likely next requests
-- Custom domain coming: Isaac is deciding between roccocarik.com / carikhealth.com
-  (GoDaddy). When bought: add CNAME file, 4 A-records + www CNAME at registrar,
-  set Pages custom domain + HTTPS.
+- **Domain: carikhealth.com (GoDaddy), connected WRONG as of 2026-07-04.** Someone
+  set up GoDaddy "forwarding with masking" — the domain serves a frameset wrapping
+  the github.io URL. This breaks mobile rendering (no viewport in the mask frame),
+  mailto links, and Google indexing. Fix: at GoDaddy DELETE the forwarding, add
+  4 A records @ → 185.199.108.153/109/110/111.153 and CNAME www →
+  infamous-collab.github.io. THEN (not before — it would create a redirect loop
+  with the mask) add a `CNAME` file containing `carikhealth.com` to the repo root
+  and enable HTTPS in Pages settings.
+- Rocco will send a cleaner profile pic — swap assets/rocco.webp when it arrives.
 - Site copy promises a 10-minute call but the Calendly event is named "30min" —
   consider having Rocco rename the event or align the copy.
 - Add real **Google reviews/testimonials** section when available.
