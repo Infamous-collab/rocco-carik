@@ -9,7 +9,8 @@ Built as a 1-to-1-but-better remake of his competitor's site: https://oxana.care
 Advisors or UnitedHealthcare anywhere. Positioning is "Independent Licensed Agent."
 Do not reintroduce carrier names.
 
-- **Live URL (send this to people):** https://infamous-collab.github.io/rocco-carik/
+- **Live URL (send this to people):** https://carikhealth.com/
+  (old github.io/rocco-carik URL 301-redirects here)
 - **Repo:** github.com/Infamous-collab/rocco-carik
 - **Owner of project:** Isaac (does marketing for Rocco). Rocco is the client/friend.
 
@@ -60,14 +61,10 @@ Health insurance marketing has state/platform rules. Keep these intact:
 - Footer disclaimer must stay.
 
 ## Known TODOs / likely next requests
-- **Domain: carikhealth.com (GoDaddy), connected WRONG as of 2026-07-04.** Someone
-  set up GoDaddy "forwarding with masking" — the domain serves a frameset wrapping
-  the github.io URL. This breaks mobile rendering (no viewport in the mask frame),
-  mailto links, and Google indexing. Fix: at GoDaddy DELETE the forwarding, add
-  4 A records @ → 185.199.108.153/109/110/111.153 and CNAME www →
-  infamous-collab.github.io. THEN (not before — it would create a redirect loop
-  with the mask) add a `CNAME` file containing `carikhealth.com` to the repo root
-  and enable HTTPS in Pages settings.
+- ~~Domain fix~~ DONE 2026-07-04: carikhealth.com properly connected (4 A records +
+  www CNAME at GoDaddy, CNAME file in repo, HTTPS enforced via Pages API). The old
+  masking-forward problem (broken mobile/mailto) is resolved; a frame-buster script
+  remains in index.html harmlessly as insurance.
 - Rocco will send a cleaner profile pic — swap assets/rocco.webp when it arrives.
 - Site copy promises a 10-minute call but the Calendly event is named "30min" —
   consider having Rocco rename the event or align the copy.
